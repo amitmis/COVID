@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>EMA</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -19,33 +19,48 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <style>
-        .first-sec{
+        .first-sec {
             align-items: center;
             text-align: center;
             margin: 70px auto;
         }
+
         .heading {
-            color: #328640;
-            margin-bottom: 50px;
+            color: #328640
+        }
+
+        .sub-heading {
+            margin: 20px auto;
+            font-size: 24px;
+        }
+
+        .form-sec {
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
 
 <body>
-    <div class="container first-sec">
-        <h1 class="heading">Choose where you need to go</h1>
-	<form action = "covid1.html">
-        	<button class="btn btn-md btn-success mb-2">Quarantine Management App - QMA</button>
-	</form>
-
-	<form action = "ema.html">
-        	<button class="btn btn-md btn-success mb-2">Effort Management App - EMA</button>
-	</form>
-	
-	<form>
-        <button class="btn btn-md btn-success mb-2">Citizen Management App - CMA</button>
-	</form>
-
+    <div class="container-fluid first-sec">
+        <h1 class="heading">Effort Management App
+        </h1>
+        <p class="sub-heading">Welcome to our Effort Management System. Please enter your Registration Number to
+            proceed.
+        </p>
+        <div class="form-sec">
+            <form class="form-inline" method="POST" action = "ema1_db.php">
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="inputPassword2" class="sr-only">Registration Number</label>
+                    <input type="password" class="form-control" id="inputPassword2" placeholder="Registration Number" name = "pass">
+                </div>
+                <button type="submit" class="btn btn-md btn-success mb-2">Submit</button>
+            </form>
+        </div>
+    </div>
     </div>
 </body>
 
